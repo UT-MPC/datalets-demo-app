@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true" android:focusableInTouchMode="true"
+        android:padding="@dimen/abc_action_bar_content_inset_material" >
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat">
+
+            <net.pherth.android.emoji_library.EmojiEditText
+                android:id="@+id/datalet_title_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:hint="Name"
+                android:textColor="@android:color/black"
+                android:inputType="textCapSentences" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat">
+
+            <net.pherth.android.emoji_library.EmojiEditText
+                android:id="@+id/datalet_desc_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:hint="Description"
+                android:textColor="@android:color/black"
+                android:inputType="textCapSentences" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/location"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/datalet_location_display"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/datalet_location_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choose_location"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/datalet_precondition_wrapper">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/precondition"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <include layout="@layout/criteria_preconditions_view"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/precondition_wrapper"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            android:id="@+id/datalet_availability_wrapper">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Availability"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <include layout="@layout/criteria_availability_view"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/task_delete_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/abc_action_bar_content_inset_material"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_delete_datalet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_action_delete_white_24"
+                android:drawableEnd="@drawable/ic_action_delete_white_24"
+                android:text="@string/action_delete"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

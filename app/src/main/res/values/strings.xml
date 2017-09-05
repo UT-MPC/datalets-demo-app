@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">ChaacApp</string>
+    <string name="items">Players</string>
+    <string name="new_player">New Player</string>
+    <string name="edit_user">Edit Player</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <string name="edit">Edit</string>
+    <string name="save">Save</string>
+    <string name="add">Add</string>
+
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="gender">Gender</string>
+    <string name="birthday">Birthday</string>
+    <string name="location">Location</string>
+
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+
+    <string name="choose_date">Choose Date</string>
+    <string name="choose_end_date">Choose End Date</string>
+    <string name="choose_location">Choose Location</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_edit">Edit</string>
+
+    <string name="userform.delete.title">Are you sure?</string>
+    <string name="userform.delete.message">Do you really want to delete?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="nav_players">Players</string>
+    <string name="nav_admin">Monsters</string>
+
+    <string-array name="nav_item_activity_titles">
+        <item>Players</item>
+        <item>Monsters</item>
+    </string-array>
+
+    <string-array name="precondition_types">
+        <item>Time based availability</item>
+        <item>Location based availability</item>
+        <item>Time and location based availability</item>
+    </string-array>
+
+    <string-array name="precondition_repeat_types">
+        <item>Not repeat</item>
+        <item>Repeat daily</item>
+        <item>Repeat weekly</item>
+        <item>Repeat on weekdays</item>
+        <item>Repeat monthly</item>
+    </string-array>
+
+    <string-array name="precondition_location_operator">
+        <item>Less than</item>
+        <item>More than</item>
+    </string-array>
+
+    <string-array name="availability_types">
+        <item>Location based access</item>
+        <item>Profile based access</item>
+        <item>Location and profile based access</item>
+    </string-array>
+
+    <string-array name="availability_profile_fields">
+        <item>First Name</item>
+        <item>Last Name</item>
+        <item>Age</item>
+        <item>Gender</item>
+        <item>Custom</item>
+    </string-array>
+
+    <string name="precondition">Appearance</string>
+    <string name="precondition_time_begin">This monster should appear beginning:</string>
+    <string name="precondition_time_should">and should: </string>
+    <string name="precondition_time_end">until:</string>
+    <string name="precondition_location_begin">This monster should be available when its location is:</string>
+    <string name="precondition_location_suffix">meters from:</string>
+
+    <string name="availability">Availability</string>
+    <string name="available_location_begin">This monster should be available to players that are:</string>
+    <string name="available_location_suffix">meters away from it</string>
+    <string name="available_profile_begin">and whose level is between:</string>
+    <string name="available_profile_suffix">as the value for the field:</string>
+</resources>

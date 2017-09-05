@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimary"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@+id/user_info_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_account_circle_white_24dp"/>
+
+            <TextView
+                android:id="@+id/user_info_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:gravity="center_vertical"
+                android:text="Full Name"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginTop="18dp"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/user_info_image"/>
+
+            <TextView
+                android:id="@+id/user_info_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:text="Email"
+                android:textColor="@color/white"
+                android:layout_toEndOf="@+id/user_info_image"
+                android:layout_below="@+id/user_info_name"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="16dp"
+                    android:text="Nearby Monsters"
+                    android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+                <Button
+                    android:id="@+id/user_view_on_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Map"/>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/user_info_available_datalets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="60dp"
+                android:paddingTop="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
