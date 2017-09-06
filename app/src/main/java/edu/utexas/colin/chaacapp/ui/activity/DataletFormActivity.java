@@ -157,15 +157,14 @@ public class DataletFormActivity extends BaseActivity
 					if (mDatalet != null) {
 						ChaacModel.model().removeDatalet(mDatalet.getId());
 
-
-						finish();
-						dismissKeyboard();
-
 						DataletDeleteEvent event = new DataletDeleteEvent();
 						event.dataletID = mDatalet.getId();
 						EventBus.getDefault().post(event);
 
-						finishActivitySuccessfully();
+						Intent resultIntent = new Intent();
+						setResult(RESULT_OK, resultIntent);
+						finish();
+						dismissKeyboard();
 
 						Intent i = new Intent(DataletFormActivity.this, MainActivity.class);
 						i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK

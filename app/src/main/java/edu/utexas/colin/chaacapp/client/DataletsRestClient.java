@@ -77,6 +77,7 @@ public class DataletsRestClient {
 	}
 
 	public static void deleteUser(String userID, ObjectCallback<User> callback) {
+        Log.e(TAG, "Delete User: " + USERS_PATH + "/" + userID);
 		deleteObject(USERS_PATH + "/" + userID, null, callback, USER_REF);
 	}
 
@@ -97,6 +98,7 @@ public class DataletsRestClient {
 	}
 
 	public static void deleteDatalet(String dataletID, ObjectCallback<Datalet> callback) {
+        Log.e(TAG, "Delete Datalet: " + DATALETS_PATH + "/" + dataletID);
 		deleteObject(DATALETS_PATH + "/" + dataletID, null, callback, DATALET_REF);
 	}
 

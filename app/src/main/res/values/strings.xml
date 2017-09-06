@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ChaacApp</string>
+    <string name="app_name">Datalets Demo</string>
     <string name="items">Players</string>
     <string name="new_player">New Player</string>
     <string name="edit_user">Edit Player</string>

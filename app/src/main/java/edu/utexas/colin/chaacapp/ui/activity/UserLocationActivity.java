@@ -3,6 +3,7 @@ package edu.utexas.colin.chaacapp.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -19,6 +20,8 @@ import edu.utexas.colin.chaacapp.ui.BaseActivity;
 public class UserLocationActivity extends BaseActivity
         implements OnMapLongClickListener, OnMapReadyCallback {
 
+    public static final String TAG = "UserLocationActivity";
+
     private GoogleMap mMap;
     private LatLng currentLocation;
     private Marker mMarker;
@@ -31,7 +34,7 @@ public class UserLocationActivity extends BaseActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        Log.e(TAG, "Creating Map");
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         currentLocation = new LatLng(bundle.getDouble("latitude"), bundle.getDouble("longitude"));
@@ -42,6 +45,7 @@ public class UserLocationActivity extends BaseActivity
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        Log.e(TAG, "Map Ready");
         mMap = googleMap;
         mMap.setOnMapLongClickListener(this);
         mMap.getUiSettings().setMapToolbarEnabled(false);
